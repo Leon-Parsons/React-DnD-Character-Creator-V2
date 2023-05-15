@@ -37,7 +37,7 @@ const PageManager = () => {
         {displayPage()}
       </div>
       <p>Page number: {page}</p>
-      <button onClick={previousPage} disabled={page <= 1}>Previous</button>
+      <button onClick={previousPage} disabled={page <= 0}>Previous</button>
       <button onClick={nextPage} disabled={page >= 4}>Next</button>
     </div>
   )
