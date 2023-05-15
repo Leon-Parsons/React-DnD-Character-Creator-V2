@@ -3,7 +3,9 @@ import Homepage from '../pages/Homepage';
 import CharacterName from '../pages/CharacterName';
 import CharacterOptions from '../pages/CharacterOptions';
 import CharacterStats from '../pages/CharacterStats';
-import ConfirmCharacter from '../pages/ConfirmCharacter'
+import ConfirmCharacter from '../pages/ConfirmCharacter';
+
+import CharacterContextProvider from '../contexts/CharacterContext';
 
 const PageManager = () => {
 
@@ -34,9 +36,10 @@ const PageManager = () => {
   return (
     <div>
       <div className='pageDiv'>
-        {displayPage()}
+        <CharacterContextProvider>
+          {displayPage()}
+        </CharacterContextProvider>
       </div>
-      <p>Page number: {page}</p>
       <button onClick={previousPage} disabled={page <= 1}>Previous</button>
       <button onClick={nextPage} disabled={page >= 4}>Next</button>
     </div>
