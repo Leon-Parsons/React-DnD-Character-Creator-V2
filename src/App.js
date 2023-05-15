@@ -1,10 +1,10 @@
 import './App.css';
+import PageManager from './utilities/PageManager';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <PageManager/>
     </div>
   );
 }
