@@ -1,5 +1,6 @@
 import {useContext} from 'react';
 import { CharacterContext } from '../contexts/CharacterContext';
+import {OptionsData} from '../utilities/OptionsData';
 
 const CharacterOptions = () => {
   const {charRace, charClass, charAlignment, charBackground} = useContext(CharacterContext);
